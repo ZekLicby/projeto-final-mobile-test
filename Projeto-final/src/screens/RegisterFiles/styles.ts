@@ -2,7 +2,6 @@ import styled from "styled-components/native";
 import theme from "../../theme";
 import { TouchableOpacity, View, Text } from "react-native";
 
-
 export const Container = styled.View`
   flex: 1;
  height: 100%;
@@ -10,52 +9,16 @@ export const Container = styled.View`
   align-items: center;
 `
 
-
 export const Title = styled.Text`
   font-size: 30px;
   color: black;
   margin-bottom: 15%;
 `
 
-export const Subtitle = styled.Text`
-  font-size: 25px;
-  font-weight: 500;
-  color: black;
-`
-
-export const Description = styled.Text`
-  font-size: 25px;
-  font-weight: regular;
-  color: black;
-`
-
 export const Files = styled.View`
   gap: 15px;
   margin-bottom: 20%;
 `
-
-export const AddButton = styled.TouchableOpacity`
-  background-color: #209EBA;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 292px;
-  margin-top: 20px;
-`
-
-export const ContainerInput = styled.View`
-  width: 90%;
-  margin-bottom: 10px;
-`;
-
-export const StyledTextInput = styled.TextInput`
-  height: 40px;
-  border-color: black;
-  border-width: 1px;
-  padding: 10px;
-
-`;
 
 export const ButtonContainer = styled(TouchableOpacity)`
   flex-direction: row;

@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
-import { AddButton, Container, Description, Subtitle, Title, ContainerInput, StyledTextInput, Files, ButtonContainer, Circle, ButtonText } from './styles';
-import { TouchableOpacity, Text, View } from 'react-native';
-import styled from 'styled-components/native';
+import { Container, Files, ButtonContainer, Circle, ButtonText } from './styles';
+import Button from '@components/Button';
+import theme from 'src/theme';
 
 
 interface ToggleButtonProps {
@@ -22,10 +22,6 @@ const ToggleButton: FC<ToggleButtonProps> = ({ title }) => {
     </ButtonContainer>
   );
 };
-
-import Button from '@components/Button';
-import theme from 'src/theme';
-
 
 
 export default function RegisterFiles() {
