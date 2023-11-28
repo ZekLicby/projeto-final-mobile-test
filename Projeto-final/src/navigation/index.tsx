@@ -9,6 +9,7 @@ import Profile from 'src/screens/Profile';
 import Login from 'src/screens/Login';
 import logoresponsivo from '../images/logo-responsivo.png';
 import AddColaborator from 'src/screens/AddColaborator';
+import RegisterFiles from 'src/screens/RegisterFiles';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -36,6 +37,13 @@ const DrawerScreens = () => (
         />
                <Drawer.Screen name="Cadastro de Colaborador"
             component={AddColaborator}
+            options={{
+                headerStyle:{backgroundColor: '#D9D9D9'},
+                headerRight: () => <Logo />,
+            }}
+        />
+        <Drawer.Screen name="Registros"
+            component={RegisterFiles}
             options={{
                 headerStyle:{backgroundColor: '#D9D9D9'},
                 headerRight: () => <Logo />,
