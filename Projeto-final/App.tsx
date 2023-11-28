@@ -1,8 +1,9 @@
 import React from 'react';
-import PasswordScreen from 'src/screens/PasswordScreen';
+import Navigation from 'src/navigation';
+import Login from 'src/screens/Login';
 
 export default function App() {
   return (
-    <PasswordScreen />
+    <Navigation />
   ); 
 }

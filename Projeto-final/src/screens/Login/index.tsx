@@ -4,7 +4,12 @@ import Button from '../../components/Button';
 import Input from '../../components/Input';
 import unicaplogo from '../../images/unicap-logo1.png'
 
-export default function Login() {
+export default function Login({navigation}: any) {
+
+    const goProfile = () => {
+        navigation.navigate('DrawerScreens')
+    }
+
     return (
         <Container>
             <Box>
@@ -16,7 +21,7 @@ export default function Login() {
                 <LoginArea>
                     <Input iconName="user" placeholder="Nº de matrícula" />
                     <Input iconName="lock" secureTextEntry />
-                    <Button text='Entrar' onPress={() => { console.log('oi zézé') }} />
+                    <Button text='Entrar' onPress={() => {goProfile()}} />
                     <Subtitle>Esqueceu sua senha?</Subtitle>
                 </LoginArea>
             </Box>
