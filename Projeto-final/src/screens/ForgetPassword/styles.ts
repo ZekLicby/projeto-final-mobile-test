@@ -16,10 +16,12 @@ export const Box = styled.View`
   width: 75%;
   padding: 20px;
   border-radius: 10px;
+  
 `
 
 export const ImagePrincipal = styled.Image`
 margin-top: 10px;
+margin-bottom: 70px;
 align-self: center;
 `
 
@@ -31,6 +33,7 @@ export const Title = styled.Text`
 export const Subtitle = styled.Text`
   font-size: 16px;
   color: ${theme.color.gray_two};
+  text-decoration: underline;
 `
 
 export const Info = styled.View`
