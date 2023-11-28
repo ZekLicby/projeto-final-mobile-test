@@ -1,10 +1,8 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import {  Text, View } from 'react-native';
-import ForgetPassword from 'src/screens/ForgetPassword';
+import PasswordScreen from 'src/screens/PasswordScreen';
 
 export default function App() {
   return (
-    <ForgetPassword />
+    <PasswordScreen />
   ); 
 }
