@@ -7,6 +7,7 @@ export const Container = styled.View`
  height: 100%;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 `
 
 export const Box = styled.View`
@@ -44,6 +45,7 @@ export const Description = styled.Text`
 
 export const Info = styled.View`
   flex-direction: row;
+  margin-bottom: 10%;
   gap: 5px;
 `
 

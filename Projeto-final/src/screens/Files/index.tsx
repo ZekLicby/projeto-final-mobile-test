@@ -43,9 +43,20 @@ export default function Files() {
           <Input />
           <Subtitle>Resumo Final</Subtitle>
           <Input multiline style={{ height: 140, alignItems: 'flex-start', justifyContent: 'flex-start' }} />
-
         </Box>
-
+        <Box>
+        <Title>Tramitação </Title>
+          <Subtitle>Órgão</Subtitle>
+          <Input />
+          <Subtitle>Encaminhado</Subtitle>
+          <Input />
+          <Subtitle>Anotações</Subtitle>
+          <Input multiline style={{ height: 140, alignItems: 'flex-start', justifyContent: 'flex-start' }} />
+        </Box>
+        <Info>
+          <Button width={144} text='Enviar' color={theme.color.default} onPress={() => { console.log('Fala, Zézé!') }} />
+          <Button width={144} text='Cancelar' color={theme.color.second} onPress={() => { console.log('Fala, Zézé!') }} />
+        </Info>
       </Container>
     </ScrollView>
 
