@@ -1,5 +1,6 @@
 import React from 'react';
 import { AddButton, ButtonText, Container, Description, Subtitle, Title } from './styles';
+import Button from '@components/Button';
 
 
 export default function Profile() {
@@ -21,9 +22,8 @@ export default function Profile() {
           <Description>{description}</Description>
         </React.Fragment>
       ))}
-      <AddButton>
-       <ButtonText>Adicionar colaborador</ButtonText>
-      </AddButton>
+      <Button text='Adicionar colaborador' color='#209EBA' onPress={() => { console.log('Fala, Zézé!') }} />
+
     </Container>
   );
 }
