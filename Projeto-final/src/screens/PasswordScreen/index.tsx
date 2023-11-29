@@ -1,10 +1,21 @@
 import { Box, Container, ImagePrincipal, Subtitle, Title, Info, LoginArea } from './styles';
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import unicaplogo from '../../images/unicap-logo1.png'
+import Toast from '@components/Toast';
+import theme from 'src/theme';
 
 export default function PasswordScreen() {
+  const [showToast, setShowToast] = useState(false);
+
+  const handleShowToast = () => {
+    setShowToast(true);
+    setTimeout(() => {
+      setShowToast(false);
+    }, 2000); 
+  };
+
   return (
     <Container>
       <Box>
@@ -15,7 +26,8 @@ export default function PasswordScreen() {
         </Info>
         <LoginArea>
           <Input iconName="mail" placeholder="Digite seu e-mail" secureTextEntry />
-          <Button text='Entrar' onPress={() => { console.log('oi zézé') }} />
+          <Button text='Entrar' color={theme.color.default} onPress={handleShowToast} />
+          {showToast && <Toast message="Email de recuperação enviado com sucesso!" />}
           <Subtitle>Cancelar</Subtitle>
         </LoginArea>
       </Box>
