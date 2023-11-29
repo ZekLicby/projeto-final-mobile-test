@@ -6,7 +6,7 @@ import unicaplogo from '../../images/unicap-logo1.png'
 import Toast from '@components/Toast';
 import theme from 'src/theme';
 
-export default function PasswordScreen() {
+export default function PasswordScreen({navigation}: any) {
   const [showToast, setShowToast] = useState(false);
 
   const handleShowToast = () => {
@@ -15,6 +15,15 @@ export default function PasswordScreen() {
       setShowToast(false);
     }, 2000); 
   };
+
+  const goHome = () => {
+    navigation.push('Login')
+}
+
+const goContinue= () => {
+  navigation.navigate('ForgetPassword')
+}
+
 
   return (
     <Container>
@@ -26,9 +35,9 @@ export default function PasswordScreen() {
         </Info>
         <LoginArea>
           <Input iconName="mail" placeholder="Digite seu e-mail" secureTextEntry />
-          <Button text='Entrar' color={theme.color.default} onPress={handleShowToast} />
+          <Button text='Entrar' color={theme.color.default} onPress={() => { handleShowToast(); goContinue(); }} />
           {showToast && <Toast message="Email de recuperação enviado com sucesso!" />}
-          <Subtitle>Cancelar</Subtitle>
+          <Subtitle onPress={goHome}>Cancelar</Subtitle>
         </LoginArea>
       </Box>
     </Container>

@@ -8,6 +8,7 @@ export const Container = styled.View`
   justify-content: center;
   align-items: flex-start;
   padding-left: 35px;
+  padding-top: 10px;
 `
 
 
@@ -29,26 +30,12 @@ export const ButtonText = styled.Text`
 `
 
 
-export const Description = styled.Text`
-  font-size: 25px;
-  font-weight: regular;
-  color: black;
-`
-
 export const Info = styled.View`
   flex-direction: row;
   gap: 5px;
 `
 
-export const AddButton = styled.TouchableOpacity`
-  background-color: #209EBA;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 292px;
-  margin-top: 20px;
-`
+
 
 export const ContainerInput = styled.View`
   width: 90%;

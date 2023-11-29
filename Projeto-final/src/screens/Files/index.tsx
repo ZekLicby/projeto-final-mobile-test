@@ -27,7 +27,6 @@ export default function Files() {
   return (
     <ScrollView>
       <Container>
-        <Title>Ficha de Registro </Title>
         <Box>
           <Subtitle>Requerente</Subtitle>
           <Input />

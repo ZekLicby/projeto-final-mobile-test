@@ -1,5 +1,5 @@
 import React from 'react';
-import { AddButton, ButtonText, Container, Description, Subtitle, Title } from './styles';
+import { Container, Description, Subtitle, Title } from './styles';
 import Button from '@components/Button';
 
 
@@ -15,7 +15,6 @@ export default function Profile() {
 
   return (
     <Container>
-      <Title>Meu Perfil</Title>
       {dadosPerfil.map(({ subtitle, description }, index) => (
         <React.Fragment key={index}>
           <Subtitle>{subtitle}</Subtitle>

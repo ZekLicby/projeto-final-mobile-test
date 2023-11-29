@@ -11,6 +11,8 @@ import logoresponsivo from '../images/logo-responsivo.png';
 import AddColaborator from 'src/screens/AddColaborator';
 import RegisterFiles from 'src/screens/RegisterFiles';
 import Files from 'src/screens/Files';
+import { Feather } from '@expo/vector-icons';
+
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -28,12 +30,20 @@ const Logo = () => {
 const DrawerScreens = () => (
     <Drawer.Navigator
         initialRouteName='Profile'
+        screenOptions={{
+            drawerContentContainerStyle: {flex: 1, backgroundColor: '#690013'},
+            drawerActiveBackgroundColor: 'transparent',
+            drawerActiveTintColor: 'white',
+            drawerStyle: {width: 65},
+        }}
     >
         <Drawer.Screen name="Meu Perfil"
             component={Profile}
             options={{
                 headerStyle:{backgroundColor: '#D9D9D9'},
                 headerRight: () => <Logo />,
+                drawerIcon: () => <Feather name="home" size={24} color="white" />,
+                drawerLabel: '', 
             }}
         />
                <Drawer.Screen name="Cadastro de Colaborador"
@@ -41,6 +51,9 @@ const DrawerScreens = () => (
             options={{
                 headerStyle:{backgroundColor: '#D9D9D9'},
                 headerRight: () => <Logo />,
+                drawerIcon: () => <Feather name="user" size={24} color="white" />,
+                drawerLabel: '', 
+
             }}
         />
         <Drawer.Screen name="Registros"
@@ -48,6 +61,9 @@ const DrawerScreens = () => (
             options={{
                 headerStyle:{backgroundColor: '#D9D9D9'},
                 headerRight: () => <Logo />,
+                drawerIcon: () => <Feather name="file-plus" size={24} color="white" />,
+                drawerLabel: '', 
+
             }}
         />
         <Drawer.Screen name="Fichas"
@@ -55,6 +71,8 @@ const DrawerScreens = () => (
             options={{
                 headerStyle:{backgroundColor: '#D9D9D9'},
                 headerRight: () => <Logo />,
+                drawerIcon: () => <Feather name="search" size={24} color="white" />,
+                drawerLabel: '', 
             }}
         />
     </Drawer.Navigator>

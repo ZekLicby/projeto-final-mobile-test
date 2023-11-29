@@ -10,6 +10,9 @@ export default function Login({navigation}: any) {
     const goProfile = () => {
         navigation.navigate('DrawerScreens')
     }
+    const goForgetPassword = () => {
+        navigation.navigate('PasswordScreen')
+    }
 
     return (
         <Container>
@@ -23,7 +26,7 @@ export default function Login({navigation}: any) {
                     <Input iconName="user" placeholder="Nº de matrícula" />
                     <Input iconName="lock" secureTextEntry />
                     <Button text='Entrar' color={theme.color.default} onPress={() => {goProfile()}} />
-                    <Subtitle>Esqueceu sua senha?</Subtitle>
+                    <Subtitle onPress={goForgetPassword}>Esqueceu sua senha?</Subtitle>
                 </LoginArea>
             </Box>
         </Container>

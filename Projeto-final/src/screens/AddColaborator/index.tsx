@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { AddButton, ButtonText, Container, Description, Subtitle, Title, ContainerInput, StyledTextInput, Info } from './styles';
+import { Container,  Subtitle, Title, ContainerInput, StyledTextInput, Info } from './styles';
 import { TextInputProps, ScrollView } from 'react-native';
 import Button from '@components/Button';
 import theme from 'src/theme';
@@ -27,7 +27,6 @@ export default function AddColaborator() {
   return (
     <ScrollView>
       <Container>
-        <Title>Cadastro de Colaborador</Title>
         <Subtitle>Nome</Subtitle>
         <Input />
         <Subtitle>N° de matrícula</Subtitle>

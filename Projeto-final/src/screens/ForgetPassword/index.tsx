@@ -6,7 +6,7 @@ import unicaplogo from '../../images/unicap-logo1.png'
 import theme from 'src/theme';
 import Toast from '@components/Toast';
 
-export default function ForgetPassword() {
+export default function ForgetPassword({navigation}: any) {
   const [showToast, setShowToast] = useState(false);
 
   const handleShowToast = () => {
@@ -16,6 +16,11 @@ export default function ForgetPassword() {
       setShowToast(false);
     }, 2000); 
   };
+
+  const goHome = () => {
+    navigation.push('Login')
+}
+
 
   return (
     <Container>
@@ -30,7 +35,7 @@ export default function ForgetPassword() {
           <Button text='Entrar' color={theme.color.default} onPress={handleShowToast} />
           {showToast && <Toast message="Senha alterada com sucesso!" />}
 
-          <Subtitle>Cancelar</Subtitle>
+          <Subtitle onPress={goHome}>Cancelar</Subtitle>
         </LoginArea>
       </Box>
     </Container>
