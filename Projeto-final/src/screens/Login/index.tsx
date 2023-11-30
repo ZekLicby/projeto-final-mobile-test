@@ -7,7 +7,7 @@ import theme from 'src/theme';
 
 export default function Login({navigation}: any) {
 
-    const goProfile = () => {
+    const goHome = () => {
         navigation.navigate('DrawerScreens')
     }
     const goForgetPassword = () => {
@@ -25,7 +25,7 @@ export default function Login({navigation}: any) {
                 <LoginArea>
                     <Input iconName="user" placeholder="Nº de matrícula" />
                     <Input iconName="lock" secureTextEntry />
-                    <Button text='Entrar' color={theme.color.default} onPress={() => {goProfile()}} />
+                    <Button text='Entrar' color={theme.color.default} onPress={() => {goHome()}} />
                     <Subtitle onPress={goForgetPassword}>Esqueceu sua senha?</Subtitle>
                 </LoginArea>
             </Box>
