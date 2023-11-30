@@ -12,6 +12,7 @@ import AddColaborator from 'src/screens/AddColaborator';
 import RegisterFiles from 'src/screens/RegisterFiles';
 import Files from 'src/screens/Files';
 import { Feather } from '@expo/vector-icons';
+import Home from 'src/screens/Home';
 
 
 const Stack = createNativeStackNavigator();
@@ -37,8 +38,9 @@ const DrawerScreens = () => (
             drawerStyle: {width: 65},
         }}
     >
-        <Drawer.Screen name="Meu Perfil"
-            component={Profile}
+
+        <Drawer.Screen name="Home"
+            component={Home}
             options={{
                 headerStyle:{backgroundColor: '#D9D9D9'},
                 headerRight: () => <Logo />,
@@ -46,8 +48,8 @@ const DrawerScreens = () => (
                 drawerLabel: '', 
             }}
         />
-               <Drawer.Screen name="Cadastro de Colaborador"
-            component={AddColaborator}
+               <Drawer.Screen name="Meu Perfil"
+            component={Profile}
             options={{
                 headerStyle:{backgroundColor: '#D9D9D9'},
                 headerRight: () => <Logo />,
@@ -56,7 +58,7 @@ const DrawerScreens = () => (
 
             }}
         />
-        <Drawer.Screen name="Registros"
+        <Drawer.Screen name="Registro"
             component={RegisterFiles}
             options={{
                 headerStyle:{backgroundColor: '#D9D9D9'},
@@ -74,7 +76,16 @@ const DrawerScreens = () => (
                 drawerIcon: () => <Feather name="search" size={24} color="white" />,
                 drawerLabel: '', 
             }}
-        />
+        /> 
+        <Drawer.Screen
+                    name="AddColaborator"
+                    component={AddColaborator}
+                    options={{
+                        headerStyle:{backgroundColor: '#D9D9D9'},
+                        headerRight: () => <Logo />,
+                        drawerLabel: '', 
+                    }}
+                />
     </Drawer.Navigator>
 
 );
@@ -100,10 +111,12 @@ export default function Navigation() {
                     name="PasswordScreen"
                     component={PasswordScreen}
                 />
+
                 <Stack.Screen
                     name="DrawerScreens"
                     component={DrawerScreens}
                 />
+        
             </Stack.Navigator>
         </NavigationContainer>
     );

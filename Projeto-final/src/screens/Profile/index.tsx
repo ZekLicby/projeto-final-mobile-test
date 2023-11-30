@@ -3,7 +3,7 @@ import { Container, Description, Subtitle, Title } from './styles';
 import Button from '@components/Button';
 
 
-export default function Profile() {
+export default function Profile({navigation}: any) {
   const dadosPerfil = [
     { subtitle: 'Nome', description: 'Charly Silva' },
     { subtitle: 'N° de matrícula', description: '00000000' },
@@ -13,6 +13,10 @@ export default function Profile() {
     { subtitle: 'Setor', description: 'Protocolo' },
   ];
 
+  const goToColaborator = () => {
+    navigation.navigate('AddColaborator')
+  };
+
   return (
     <Container>
       {dadosPerfil.map(({ subtitle, description }, index) => (
@@ -21,7 +25,7 @@ export default function Profile() {
           <Description>{description}</Description>
         </React.Fragment>
       ))}
-      <Button text='Adicionar colaborador' color='#209EBA' onPress={() => { console.log('Fala, Zézé!') }} />
+      <Button text='Adicionar colaborador' color='#209EBA' onPress={goToColaborator} />
 
     </Container>
   );
