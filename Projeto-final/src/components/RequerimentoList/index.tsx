@@ -14,10 +14,12 @@ const ItemContainer = styled(TouchableOpacity)`
   margin: 5px;
 `;
 
-const RequerimentoList: React.FC<RequerimentoListProps> = ({ data }) => {
+const RequerimentoList: React.FC<RequerimentoListProps & { selectedDepartment: string }> = ({ data, selectedDepartment }) => {
+  const filteredData = selectedDepartment ? data.filter((item) => item.setor === selectedDepartment) : data;
+
   return (
     <>
-      {data.map((item, index) => (
+      {filteredData.map((item, index) => (
         <ItemContainer key={index}>
           <Text>{item.nome}</Text>
           <Text>{item.dataHora}</Text>

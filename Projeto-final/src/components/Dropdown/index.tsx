@@ -17,18 +17,22 @@ const Dropdown = styled(Picker)`
 `;
 
 // Componente principal
-const DropdownComponent = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState('');
-
-  const departments = ['Todos os departamentos', 'Protocolos', 'Admissão', 'Diretoria'];
+const DropdownComponent = ({
+  selectedDepartment,
+  onDepartmentChange,
+}: {
+  selectedDepartment: string;
+  onDepartmentChange: (value: string) => void;
+}) => {
+  const departments = ['Protocolos', 'Admissão', 'Diretoria'];
 
   return (
     <Container>
       <Dropdown
         selectedValue={selectedDepartment}
-        onValueChange={(itemValue) => setSelectedDepartment(itemValue)}
+        onValueChange={(itemValue) => onDepartmentChange(itemValue)}
       >
-        <Picker.Item label="Selecionar departamento" value="" />
+        <Picker.Item label="Todos os departamentos" value="Todos os departamentos" />
         {departments.map((department, index) => (
           <Picker.Item key={index} label={department} value={department} />
         ))}
