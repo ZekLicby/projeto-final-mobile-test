@@ -6,17 +6,26 @@ import theme from 'src/theme';
 
 interface ToggleButtonProps {
   title: string;
+  onPressNavigate?: () => void; 
 }
 
-const ToggleButton: FC<ToggleButtonProps> = ({ title }) => {
+const ToggleButton: FC<ToggleButtonProps> = ({ title, onPressNavigate }) => {
   const [isFilled, setIsFilled] = useState<boolean>(false);
 
   const handleToggle = () => {
     setIsFilled(!isFilled);
   };
 
+  const handlePress = () => {
+    handleToggle(); 
+
+    if (onPressNavigate) {
+      onPressNavigate();
+    }
+  };
+
   return (
-    <ButtonContainer onPress={handleToggle}>
+    <ButtonContainer onPress={handlePress}>
       <Circle isFilled={isFilled} />
       <ButtonText>{title}</ButtonText>
     </ButtonContainer>
@@ -24,12 +33,21 @@ const ToggleButton: FC<ToggleButtonProps> = ({ title }) => {
 };
 
 
-export default function RegisterFiles() {
+export default function RegisterFiles({navigation}: any) {
+
+  const goToFilesOne = () => {
+    navigation.navigate('Fichas')
+  };
+
+  const goToFilesTwo = () => {
+    navigation.navigate('Fichas 2')
+  };
+
   return (
     <Container>
       <Files>
-        <ToggleButton title='Ficha de registro 01' />
-        <ToggleButton title='Ficha de registro 02' />
+        <ToggleButton onPressNavigate={goToFilesOne} title='Ficha de registro 01' />
+        <ToggleButton  onPressNavigate={goToFilesTwo} title='Ficha de registro 02' />
       </Files>
 
 

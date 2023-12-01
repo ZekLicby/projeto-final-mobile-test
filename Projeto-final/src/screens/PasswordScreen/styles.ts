@@ -30,6 +30,7 @@ export const Title = styled.Text`
 
 export const Subtitle = styled.Text`
   font-size: 16px;
+  padding-bottom: 5px;
   color: ${theme.color.gray_two};
 `
 

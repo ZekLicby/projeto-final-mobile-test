@@ -24,7 +24,7 @@ export default function Login({navigation}: any) {
                 </Info>
                 <LoginArea>
                     <Input iconName="user" placeholder="Nº de matrícula" />
-                    <Input iconName="lock" secureTextEntry />
+                    <Input iconName="lock" placeholder="•••••••" secureTextEntry />
                     <Button text='Entrar' color={theme.color.default} onPress={() => {goHome()}} />
                     <Subtitle onPress={goForgetPassword}>Esqueceu sua senha?</Subtitle>
                 </LoginArea>
