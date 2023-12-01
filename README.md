@@ -1,2 +1,2 @@
 # projeto-final-mobile
-Projeto final usando React Native de cadeira da faculdade
+Projeto final usando React Native
