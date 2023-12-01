@@ -36,8 +36,6 @@ export const Subtitle = styled.Text`
 
 export const Info = styled.View`
   flex: 1;
-  gap: 15px;
-  margin-top: 20%;
   justify-content: flex-start;
   align-items: flex-start;
 `
