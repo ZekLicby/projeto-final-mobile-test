@@ -34,6 +34,7 @@ export default function RegisterFiles() {
 
 
       <Button text='Enviar' color={theme.color.default} onPress={() => console.log('heyjude')} />
+      
     </Container>
 
   );

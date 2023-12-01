@@ -6,13 +6,15 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import ForgetPassword from 'src/screens/ForgetPassword';
 import PasswordScreen from 'src/screens/PasswordScreen';
 import Profile from 'src/screens/Profile';
+import Home from 'src/screens/Home';
 import Login from 'src/screens/Login';
+import Consulta from 'src/screens/Consulta';
 import logoresponsivo from '../images/logo-responsivo.png';
 import AddColaborator from 'src/screens/AddColaborator';
 import RegisterFiles from 'src/screens/RegisterFiles';
 import Files from 'src/screens/Files';
 import { Feather } from '@expo/vector-icons';
-import Home from 'src/screens/Home';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -30,7 +32,7 @@ const Logo = () => {
 
 const DrawerScreens = () => (
     <Drawer.Navigator
-        initialRouteName='Profile'
+        initialRouteName='Home'
         screenOptions={{
             drawerContentContainerStyle: {flex: 1, backgroundColor: '#690013'},
             drawerActiveBackgroundColor: 'transparent',
@@ -73,19 +75,31 @@ const DrawerScreens = () => (
             options={{
                 headerStyle:{backgroundColor: '#D9D9D9'},
                 headerRight: () => <Logo />,
-                drawerIcon: () => <Feather name="search" size={24} color="white" />,
+                drawerIcon: () => <Feather name="file-text" size={24} color="white" />,
                 drawerLabel: '', 
             }}
         /> 
         <Drawer.Screen
-                    name="AddColaborator"
+                    name="Cadastro Colaborador"
                     component={AddColaborator}
+                    
                     options={{
                         headerStyle:{backgroundColor: '#D9D9D9'},
                         headerRight: () => <Logo />,
+                        drawerIcon: () => <Feather name="user-plus" size={24} color="white" />,
                         drawerLabel: '', 
                     }}
                 />
+      
+        <Drawer.Screen name="Consulta"
+            component={Consulta}
+            options={{
+                headerStyle:{backgroundColor: '#D9D9D9'},
+                headerRight: () => <Logo />,
+                drawerIcon: () => <Feather name="search" size={24} color="white" />,
+                drawerLabel: '', 
+            }}
+        />
     </Drawer.Navigator>
 
 );
@@ -111,7 +125,6 @@ export default function Navigation() {
                     name="PasswordScreen"
                     component={PasswordScreen}
                 />
-
                 <Stack.Screen
                     name="DrawerScreens"
                     component={DrawerScreens}

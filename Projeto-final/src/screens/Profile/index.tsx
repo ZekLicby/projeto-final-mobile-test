@@ -14,7 +14,7 @@ export default function Profile({navigation}: any) {
   ];
 
   const goToColaborator = () => {
-    navigation.navigate('AddColaborator')
+    navigation.navigate('Cadastro Colaborador')
   };
 
   return (
